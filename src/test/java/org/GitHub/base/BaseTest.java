@@ -19,6 +19,6 @@ public class BaseTest {
         requestSpec = RestAssured.given()
                 .baseUri(APIConstants.BASE_URL)
                 .accept("application/vnd.github+json")
-                .header("Authorization", "Token");
+                .header("Authorization",APIConstants.token);
     }
 }
