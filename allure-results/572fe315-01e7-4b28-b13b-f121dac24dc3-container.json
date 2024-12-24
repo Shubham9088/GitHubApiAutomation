@@ -1,0 +1,1 @@
+{"uuid":"572fe315-01e7-4b28-b13b-f121dac24dc3","name":"GitHubApiAutomation","children":["f1488fb5-9438-4c73-b207-f952693fcd51"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1735038540749,"stop":1735038541312}],"afters":[],"start":1735038540726,"stop":1735038543064}

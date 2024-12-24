@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1336","test_VerifyUserDetails","Default Suite","Tue Dec 24 16:39:32 IST 2024","passed","Tue Dec 24 16:39:34 IST 2024","org.GitHub.test.crud.TestUserDetails","GitHubApiAutomation","org.GitHub.test.crud.TestUserDetails","test_VerifyUserDetails"
+"","1260","testVerifyUserDetails","All Test Suite","Mon Dec 23 22:29:19 IST 2024","failed","Mon Dec 23 22:29:21 IST 2024","org.GitHub.test.crud.TestUserDetails","C:/Users/HP/IdeaProjects/GitHubApiAutomation","org.GitHub.test.crud.TestUserDetails","testVerifyUserDetails"
