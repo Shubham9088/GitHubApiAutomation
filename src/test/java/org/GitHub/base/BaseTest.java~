@@ -13,7 +13,7 @@ public class BaseTest {
 
     public RequestSpecification requestSpec;
     public Response response;
-    
+
     @BeforeTest
     public void setUp() {
         requestSpec = RestAssured.given()
