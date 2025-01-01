@@ -13,7 +13,12 @@ public class TestData {
         map = new LinkedHashMap<>();
         map.put("login", "Shubham9088");
         map.put("id", 46985699);
-        map.put("public_repos", 5);
+        map.put("public_repos", 4);
+        map.put("name", "Shubham Chakole");
+        map.put("location", "Pune");
+        map.put("email",null);
+        map.put("followers", 0);
+        map.put("following", 1);
         return map;
     }
 }

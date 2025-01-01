@@ -8,15 +8,12 @@ import java.util.List;
 public class PayloadManager {
 
     public static Gson gson;
-
     public static UserDetails userDetailsResponse(String jsonResponse) {
         gson = new Gson();
-        UserDetails user = gson.fromJson(jsonResponse, UserDetails.class);
+        UserDetails user= gson.fromJson(jsonResponse, UserDetails.class);
         return user;
     }
 
-    public static List<?> blockedUserList(String jsonResponse) {
-        return gson.fromJson(jsonResponse, List.class);
-    }
+    public static List<?> blockedUserList(String jsonResponse) { return gson.fromJson(jsonResponse, List.class); }>
 
 }
