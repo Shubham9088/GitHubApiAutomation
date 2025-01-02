@@ -8,6 +8,8 @@ import java.util.LinkedHashMap;
 
 public class TestData {
 
+    private static final String emailVisibility[]={"private", "public"};
+    public static String userNames[]={"Shubham9088","TestUser-Automation"};
     public static LinkedHashMap<String, Object> map;
     public static LinkedHashMap<String, Object> userTesData(){
         map = new LinkedHashMap<>();

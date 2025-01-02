@@ -1,5 +1,7 @@
 package org.GitHub.pojos;
 
+import java.util.Objects;
+
 public class UserDetails {
 
     private String login;
@@ -19,20 +21,69 @@ public class UserDetails {
     private String events_url;
     private String received_events_url;
     private String type;
+    private String user_view_type;
     private boolean site_admin;
     private String name;
     private String company;
     private String blog;
     private String location;
     private String email;
-    private boolean hireable;
+    private String hireable;
     private String bio;
+    private String twitter_username;
+    private String notification_email;
     private int public_repos;
     private int public_gists;
     private int followers;
     private int following;
     private String created_at;
     private String updated_at;
+    private Plan plan;
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        UserDetails that = (UserDetails) o;
+        return id == that.id && site_admin == that.site_admin && hireable == that.hireable && public_repos == that.public_repos && public_gists == that.public_gists && followers == that.followers && following == that.following && Objects.equals(login, that.login) && Objects.equals(node_id, that.node_id) && Objects.equals(avatar_url, that.avatar_url) && Objects.equals(gravatar_id, that.gravatar_id) && Objects.equals(url, that.url) && Objects.equals(html_url, that.html_url) && Objects.equals(followers_url, that.followers_url) && Objects.equals(following_url, that.following_url) && Objects.equals(gists_url, that.gists_url) && Objects.equals(starred_url, that.starred_url) && Objects.equals(subscriptions_url, that.subscriptions_url) && Objects.equals(organizations_url, that.organizations_url) && Objects.equals(repos_url, that.repos_url) && Objects.equals(events_url, that.events_url) && Objects.equals(received_events_url, that.received_events_url) && Objects.equals(type, that.type) && Objects.equals(name, that.name) && Objects.equals(company, that.company) && Objects.equals(blog, that.blog) && Objects.equals(location, that.location) && Objects.equals(email, that.email) && Objects.equals(bio, that.bio) && Objects.equals(created_at, that.created_at) && Objects.equals(updated_at, that.updated_at);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(login, id, node_id, avatar_url, gravatar_id, url, html_url, followers_url, following_url, gists_url, starred_url, subscriptions_url, organizations_url, repos_url, events_url, received_events_url, type, site_admin, name, company, blog, location, email, hireable, bio, public_repos, public_gists, followers, following, created_at, updated_at);
+    }
+
+    public String getTwitter_username() {
+        return twitter_username;
+    }
+
+    public void setTwitter_username(String twitter_username) {
+        this.twitter_username = twitter_username;
+    }
+
+    public String getNotification_email() {
+        return notification_email;
+    }
+
+    public void setNotification_email(String notification_email) {
+        this.notification_email = notification_email;
+    }
+
+
+    public Plan getPlan() {
+        return plan;
+    }
+
+    public void setPlan(Plan plan) {
+        this.plan = plan;
+    }
+
+    public String getUser_view_type() {
+        return user_view_type;
+    }
+
+    public void setUser_view_type(String user_view_type) {
+        this.user_view_type = user_view_type;
+    }
 
     public String getUpdated_at() {
         return updated_at;
@@ -90,11 +141,11 @@ public class UserDetails {
         this.bio = bio;
     }
 
-    public boolean isHireable() {
+    public String getHireable() {
         return hireable;
     }
 
-    public void setHireable(boolean hireable) {
+    public void setHireable(String hireable) {
         this.hireable = hireable;
     }
 

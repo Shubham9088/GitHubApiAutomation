@@ -35,5 +35,14 @@ public class AssertAction {
         }
     }
 
-
+    public static void verifyResponseObject(Object actualObject,Object expectedObject){
+        if(actualObject == null || expectedObject == null) {
+            Assert.fail("Object is null");
+        }
+        if(actualObject.getClass()!=expectedObject.getClass()){
+            Assert.fail("Class is not same");
+        }
+        boolean result= actualObject.equals(expectedObject);
+        assertThat(result).isTrue();
+    }
 }

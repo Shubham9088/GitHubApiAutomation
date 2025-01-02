@@ -2,14 +2,15 @@ package org.GitHub.test.crud;
 
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import org.GitHub.asserts.AssertAction;
 import org.GitHub.base.BaseTest;
 import org.GitHub.endpoints.APIConstants;
+import org.GitHub.expectedresults.UserDetailsExpectedResult;
 import org.GitHub.modules.PayloadManager;
-import org.GitHub.modules.TestData;
+import org.GitHub.pathParams.PathParams;
+import org.GitHub.pojos.EmailDetails;
 import org.GitHub.pojos.UserDetails;
-import org.GitHub.statuscode.StatusCode;
+import org.GitHub.expectedresults.StatusCode;
 import org.testng.annotations.Test;
 
 public class TestUserDetails extends BaseTest {
@@ -23,31 +24,29 @@ public class TestUserDetails extends BaseTest {
 
         UserDetails user= PayloadManager.userDetailsResponse(response.asString());
         AssertAction.verifyStatusCode(response, StatusCode.SUCCESS_CODE);
-        AssertAction.verifyResponseField(user,TestData.userTesData());
+        AssertAction.verifyResponseObject(user, UserDetailsExpectedResult.getUserDetailsExpectedResult());
     }
 
-    @Description("Positive Test -- Get blocked user list")
+    @Description("Positive Test -- update primary email visibility")
     @Test
-    public void test_VerifyBlockedUserList() {
-        requestSpec.basePath(APIConstants.getAllBlockedUserList);
+    public void test_PrimaryEmailVisibility() {
+        requestSpec.basePath(APIConstants.emailVisibility)
+                .body(PayloadManager.sendEmailVisibilityPayload());
         response=RestAssured.given(requestSpec)
-                .get();
+                .patch();
 
         AssertAction.verifyStatusCode(response,StatusCode.SUCCESS_CODE);
     }
 
-    @Description("Positive Test -- Check if user is blocked return 404 if user is not blocked and 204 if user is blocked")
+    @Description("Positive Test -- Get email addresses of authenticated user")
     @Test
-    public void test_VerifyUserIsBlocked(){
-        requestSpec.basePath(APIConstants.checkUserIsBlocked)
-                .pathParams("username","shchak")
-                .log().all();
-
+    public void test_GetEmailAddresses() {
+        requestSpec.basePath(APIConstants.getEmailAddress);
         response=RestAssured.given(requestSpec)
                 .get();
 
-        AssertAction.verifyStatusCode(response,StatusCode.NOT_FOUND_CODE);
-
+        EmailDetails[] email=PayloadManager.listEmailDetails(response.asString());
+        AssertAction.verifyStatusCode(response,StatusCode.SUCCESS_CODE);
+        AssertAction.verifyResponseObject(email[0], PathParams.getEmailDetails());
     }
-
 }

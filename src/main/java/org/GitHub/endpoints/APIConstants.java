@@ -6,5 +6,7 @@ public class APIConstants {
     public static final String token=System.getProperty("token");
     public static final String invalidToken="Bear abc";
     public static final String getAllBlockedUserList="/user/blocks";
-    public static final String checkUserIsBlocked="/user/blocks/{username}";
+    public static final String blockUser ="/user/blocks/{username}";
+    public static final String emailVisibility="/user/email/visibility";
+    public static final String getEmailAddress="/user/emails";
 }

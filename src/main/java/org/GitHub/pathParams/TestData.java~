@@ -1,0 +1,36 @@
+package org.GitHub.pathParams;
+
+import org.GitHub.pojos.EmailDetails;
+
+import java.util.LinkedHashMap;
+
+public class TestData {
+
+    private static final String emailVisibility[]={"private", "public"};
+    private static final String userNames[]={"Shubham9088","TestUser-Automation"};
+    private static LinkedHashMap<String, Object> map;
+    public static LinkedHashMap<String, Object> setUserTesData(){
+        map = new LinkedHashMap<>();
+        map.put("login", "Shubham9088");
+        map.put("id", 46985699);
+        map.put("public_repos", 4);
+        map.put("name", "Shubham Chakole");
+        map.put("location", "Pune");
+        map.put("email",null);
+        map.put("followers", 0);
+        map.put("following", 1);
+        return map;
+    }
+
+    public static String[] getEmailVisibility() {
+        return emailVisibility;
+    }
+
+    public static String[] getUserNames() {
+        return userNames;
+    }
+
+    public static EmailDetails getEmailDetails() {
+        return new EmailDetails("shubhamchakole22@gmail.com",true,true,"private");
+    }
+}

@@ -4,7 +4,7 @@ import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import org.GitHub.asserts.AssertAction;
 import org.GitHub.endpoints.APIConstants;
-import org.GitHub.statuscode.StatusCode;
+import org.GitHub.expectedresults.StatusCode;
 import org.testng.annotations.Test;
 import org.GitHub.base.BaseTest;
 

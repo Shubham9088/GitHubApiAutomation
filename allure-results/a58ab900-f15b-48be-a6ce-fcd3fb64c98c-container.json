@@ -1,0 +1,1 @@
+{"uuid":"a58ab900-f15b-48be-a6ce-fcd3fb64c98c","name":"org.GitHub.base.BaseTest.setUp","children":["66f61f83-e8c4-4627-820d-300ca377b0ab"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1735721391994,"stop":1735721391995}],"afters":[],"start":1735721391994,"stop":1735721391995}
