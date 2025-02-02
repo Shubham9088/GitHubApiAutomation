@@ -32,7 +32,7 @@ public class UserDetailsExpectedResult {
         userDetails.setLocation("Pune");
         userDetails.setEmail(null);
         userDetails.setHireable(null);
-        userDetails.setBio("");
+        userDetails.setBio(null);
         userDetails.setTwitter_username(null);
         userDetails.setNotification_email(null);
         userDetails.setPublic_repos(4);
@@ -40,7 +40,7 @@ public class UserDetailsExpectedResult {
         userDetails.setFollowers(0);
         userDetails.setFollowing(1);
         userDetails.setCreated_at("2019-01-24T04:13:42Z");
-        userDetails.setUpdated_at("2025-01-01T06:23:38Z");
+        userDetails.setUpdated_at("2025-01-06T11:26:06Z");
         Plan plan=new Plan();
         plan.setName("free");
         plan.setSpace(976562499);

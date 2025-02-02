@@ -2,6 +2,7 @@ package org.GitHub.modules;
 
 import com.google.gson.Gson;
 import org.GitHub.pathParams.PathParams;
+import org.GitHub.pojos.AddEmail;
 import org.GitHub.pojos.EmailDetails;
 import org.GitHub.pojos.EmailVisibility;
 import org.GitHub.pojos.UserDetails;
@@ -31,6 +32,15 @@ public class PayloadManager {
     public static EmailDetails[] listEmailDetails(String jsonResponse) {
         gson=new Gson();
         return gson.fromJson(jsonResponse, EmailDetails[].class);
+    }
+
+    public static String AddEmailToAuthorizedUserPayload(){
+        gson=new Gson();
+        AddEmail addEmail=new AddEmail();
+        String emails[]={"anc@gmail.com","qwe@gmailcom"};
+        addEmail.setEmail(emails);
+        String emailPayload=gson.toJson(addEmail);
+        return emailPayload;
     }
 
 }

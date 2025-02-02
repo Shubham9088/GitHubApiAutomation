@@ -5,6 +5,7 @@ import io.restassured.RestAssured;
 import org.GitHub.asserts.AssertAction;
 import org.GitHub.base.BaseTest;
 import org.GitHub.endpoints.APIConstants;
+import org.GitHub.expectedresults.UserDetailsExpectedResult;
 import org.GitHub.modules.PayloadManager;
 import org.GitHub.pathParams.PathParams;
 import org.GitHub.pojos.EmailDetails;
@@ -23,7 +24,7 @@ public class TestUserDetails extends BaseTest {
 
         UserDetails user= PayloadManager.userDetailsResponse(response.asString());
         AssertAction.verifyStatusCode(response, StatusCode.SUCCESS_CODE);
-        //AssertAction.verifyResponseField(user, PathParams.setUserTesData());
+        AssertAction.verifyResponseObject(user, UserDetailsExpectedResult.getUserDetailsExpectedResult());
     }
 
     @Description("Positive Test -- update primary email visibility")
@@ -48,4 +49,8 @@ public class TestUserDetails extends BaseTest {
         AssertAction.verifyStatusCode(response,StatusCode.SUCCESS_CODE);
         AssertAction.verifyResponseObject(email[0], PathParams.getEmailDetails());
     }
+
+    
+
+
 }

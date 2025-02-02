@@ -10,7 +10,6 @@ import org.GitHub.base.BaseTest;
 
 public class InvalidToken extends BaseTest {
 
-    //Negative test case with invalid token
     @Description("Negative Test -- Get user details with invalid token")
     @Test
     public void test_VerifyUserDetails_InvalidToken() {

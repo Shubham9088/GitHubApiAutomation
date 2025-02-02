@@ -9,4 +9,6 @@ public class APIConstants {
     public static final String blockUser ="/user/blocks/{username}";
     public static final String emailVisibility="/user/email/visibility";
     public static final String getEmailAddress="/user/emails";
+    public static final String listFollowers="/user/followers";
+    public static final String listFollowing="/user/following";
 }

@@ -49,4 +49,8 @@ public class TestUserDetails extends BaseTest {
         AssertAction.verifyStatusCode(response,StatusCode.SUCCESS_CODE);
         AssertAction.verifyResponseObject(email[0], PathParams.getEmailDetails());
     }
+
+
+
+
 }

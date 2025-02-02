@@ -1,0 +1,14 @@
+package org.GitHub.pojos;
+
+public class AddEmail {
+    private String email[];
+
+    public void setEmail(String email[]) {
+        this.email = email;
+    }
+
+    public String[] getEmail() {
+        return email;
+    }
+    
+}
